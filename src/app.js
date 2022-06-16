@@ -10,8 +10,9 @@ app.use(morgan('dev'));
 app.use(cors());
 app.use(express.json());
 
-//
-//
+app.use('/user', require('./routes/user.routes'));
+app.use('/message', require('./routes/message.routes'));
+app.use('/history', require('./routes/history.routes'));
 
 
 module.exports = app;
