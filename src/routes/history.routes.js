@@ -2,12 +2,14 @@ const router = require('express').Router();
 
 const { seeHistory, addToHistory, clearHistory } = require('../controllers/history.controllers');
 
+const verifyToken = require('../middlewares/tokenVerifiy');
 
-router.get('/', seeHistory);
 
-router.post('/add', addToHistory);
+router.get('/', [verifyToken], seeHistory);
 
-router.delete('/clear', clearHistory);
+router.post('/add', [verifyToken], addToHistory);
+
+router.delete('/clear', [verifyToken], clearHistory);
 
 
 module.exports = router;

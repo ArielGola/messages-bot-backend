@@ -8,16 +8,18 @@ const {
     deleteMessage 
 } = require('../controllers/message.controllers');
 
+const verifyToken = require('../middlewares/tokenVerifiy');
 
-router.get('/', viewMessages);
 
-router.get('/:id', viewOneMessage);
+router.get('/', [verifyToken], viewMessages);
 
-router.post('/create', createMessage);
+router.get('/:id', [verifyToken], viewOneMessage);
 
-router.put('/edit/:id', editMessage);
+router.post('/create', [verifyToken], createMessage);
 
-router.delete('/delete/:id', deleteMessage);
+router.put('/edit/:id', [verifyToken], editMessage);
+
+router.delete('/delete/:id', [verifyToken], deleteMessage);
 
 
 module.exports = router;
