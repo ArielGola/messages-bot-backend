@@ -23,6 +23,7 @@ historyControllers.addToHistory = async (req, res) => {
         const {numSend, timeSended, content, category} = req.body;
 
         const newHistory = new HistoryModel({
+            numUser: String(req.userPass.id),
             numSend,
             timeSended,
             content,
