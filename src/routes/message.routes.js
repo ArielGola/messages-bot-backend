@@ -11,7 +11,7 @@ const {
 const verifyToken = require('../middlewares/tokenVerifiy');
 
 
-router.get('/', [verifyToken], viewMessages);
+router.get('/all', [verifyToken], viewMessages);
 
 router.get('/:id', [verifyToken], viewOneMessage);
 

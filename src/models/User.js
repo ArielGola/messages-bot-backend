@@ -18,7 +18,7 @@ newUser.statics.encryptPassword = async (password) => {
     return await bcrypt.hash(password, salt);
 };
 
-newUser.statics.comparePassword = (password, recivedPassword) => {
+newUser.statics.comparePassword = async (password, recivedPassword) => {
     return await bcrypt.compare(password, recivedPassword);
 };
 

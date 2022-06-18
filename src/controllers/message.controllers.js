@@ -37,7 +37,7 @@ msgControllers.createMessage = async (req, res) => {
         const {numSend, content, timeSend, category, frequency} = req.body;
 
         const newMsg = new MsgModel({
-            numUser: req.userPass.id,
+            numUser: String(req.userPass.id),
             numSend,
             content,
             timeSend,

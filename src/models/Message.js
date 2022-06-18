@@ -17,7 +17,7 @@ const newMessage = new Schema({
         type: String
     },
     category: {
-        type: Object
+        type: Array
     },
     frequency: {
         type: Object

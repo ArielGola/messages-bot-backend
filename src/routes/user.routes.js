@@ -9,7 +9,7 @@ router.post('/signin', signIn);
 
 router.post('/signup', signUp);
 
-router.delete('/user/delete/:id', [verifyToken], deleteUser);
+router.delete('/delete/:id', [verifyToken], deleteUser);
 
 
 module.exports = router;
