@@ -19,6 +19,8 @@ const newHistoryMsg = new Schema({
     category: {
         type: Object
     }
+}, {
+    timestamps: true
 });
 
 module.exports = model('HistoryModel', newHistoryMsg);

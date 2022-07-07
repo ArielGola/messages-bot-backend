@@ -22,6 +22,8 @@ const newMessage = new Schema({
     frequency: {
         type: Object
     }
+}, {
+    timestamps: true
 });
 
 module.exports = model('MsgModel', newMessage);
