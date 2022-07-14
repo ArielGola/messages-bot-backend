@@ -34,14 +34,14 @@ msgControllers.viewOneMessage = async (req, res) => {
 msgControllers.createMessage = async (req, res) => {
     try {
 
-        const {numSend, content, timeSend, category, frequency} = req.body;
+        const {numSend, content, timeSend, categor, frequency} = req.body;
 
         const newMsg = new MsgModel({
             numUser: String(req.userPass.id),
             numSend,
             content,
             timeSend,
-            category,
+            categor,
             frequency
         });
 
@@ -58,13 +58,13 @@ msgControllers.createMessage = async (req, res) => {
 msgControllers.editMessage = async (req, res) => {
     try {
         
-        const {numSend, content, timeSend, category, frequency} = req.body;
+        const {numSend, content, timeSend, categor, frequency} = req.body;
 
         await MsgModel.findOneAndUpdate({_id: req.params.id}, {
             numSend,
             content,
             timeSend,
-            category,
+            categor,
             frequency
         });
 

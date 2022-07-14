@@ -16,8 +16,9 @@ const newMessage = new Schema({
     timeSend: {
         type: String
     },
-    category: {
-        type: String
+    categor: {
+        type: String,
+        required: true
     },
     frequency: {
         type: Object

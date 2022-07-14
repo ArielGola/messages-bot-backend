@@ -16,8 +16,9 @@ const newHistoryMsg = new Schema({
         type: String,
         required: true
     },
-    category: {
-        type: Object
+    categor: {
+        type: Object,
+        required: true
     }
 }, {
     timestamps: true
