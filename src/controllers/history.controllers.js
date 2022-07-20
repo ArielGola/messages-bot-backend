@@ -17,6 +17,18 @@ historyControllers.seeHistory = async (req, res) => {
     };
 };
 
+historyControllers.getOneHistoryMsg = async (req, res) => {
+    try {
+        
+        const message = await HistoryModel.findOne({_id: req.params.id});
+
+        return res.status(200).json({ok: true, message});
+
+    } catch (error) {
+        return res.status(403).json({ok: false, error});
+    };
+};
+
 historyControllers.addToHistory = async (req, res) => {
     try {
         
