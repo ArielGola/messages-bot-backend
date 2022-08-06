@@ -6,5 +6,6 @@
 ##### _JWT_SECRET_, the key for use jsonwebtoken functions.
 ## Installation
 * git clone https://github.com/ArielGola/messages-bot-backend
+* cd messages-bot-backend
 * npm install
 * npm start
